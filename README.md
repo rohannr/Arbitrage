@@ -71,6 +71,17 @@ Sometimes, these currency pairs drift in a way that creates arbitrage loops wher
 	<li>Trading/Transaction costs are waived</li>
 </ul>
 
+
+<h1>Approach</h1>
+
+In the graph of currency transactions we need to find a negative cycle. 
+ => w1*w2*w3.....*wn > 1
+ => log(w1) + log(w2) + .... log(wn) > log(1) = 0
+ => log(w<sub>1</sub>) + log(w<sub>2</sub>) + log(w<sub>3</sub>) ... &lt; 0(taking negative logarithms)
+ 
+ We can identify a negative cycle in a graph using the Bellman-Ford algorithm and the predecessor array to obtain the chain of transactions involved in the arbitrage loop
+ 
+
 <h1>Data Source</h1>
 
 The currency exchange rates are pulled from http://fx.priceonomics.com/v1/rates/
