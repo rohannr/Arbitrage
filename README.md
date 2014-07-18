@@ -3,7 +3,7 @@ Arbitrage
 
 A python tool to find arbitrage opportunities given current exchange rates. Based on the pricenomics.com coding puzzle. http://priceonomics.com/jobs/puzzle/.
 
-<h1>Introduction<h1>
+<h1>Introduction</h1>
 
 Daily trading volume in currency exchange markets often exceeds $1 trillion. 
 Sometimes, these currency pairs drift in a way that creates arbitrage loops where you can convert through a certain sequence of currencies to return a profit in your base currency. This is referred to as an arbitrage loop. For example, you could do the following trades with $100 US and the exchange data below:
