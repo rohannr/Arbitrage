@@ -3,7 +3,7 @@ Arbitrage
 
 A python tool to find arbitrage opportunities given current exchange rates. Based on the pricenomics.com coding puzzle. http://priceonomics.com/jobs/puzzle/.
 
-<h1>Introduction</h1>
+<h2>Introduction</h2>
 
 Daily trading volume in currency exchange markets often exceeds $1 trillion. 
 Sometimes, these currency pairs drift in a way that creates arbitrage loops where you can convert through a certain sequence of currencies to return a profit in your base currency. This is referred to as an arbitrage loop. For example, you could do the following trades with $100 US and the exchange data below:
@@ -72,16 +72,20 @@ Sometimes, these currency pairs drift in a way that creates arbitrage loops wher
 </ul>
 
 
-<h1>Approach</h1>
+<h2>Approach</h2>
 
 In the graph of currency transactions we need to find a negative cycle. 
+
  => w1*w2*w3.....*wn > 1
- => log(w1) + log(w2) + .... log(wn) > log(1) = 0
+ => log (w1 * w2 * w3 ... ) > log(1)
+ => log(w1) + log(w2) + .... log(wn) > 0
+ 
  => log(w<sub>1</sub>) + log(w<sub>2</sub>) + log(w<sub>3</sub>) ... &lt; 0(taking negative logarithms)
  
- We can identify a negative cycle in a graph using the Bellman-Ford algorithm and the predecessor array to obtain the chain of transactions involved in the arbitrage loop
+
+We can identify a negative cycle in a graph using the Bellman-Ford algorithm and the predecessor array to obtain the chain of transactions involved in the arbitrage loop
  
 
-<h1>Data Source</h1>
+<h2>Data Source</h2>
 
 The currency exchange rates are pulled from http://fx.priceonomics.com/v1/rates/
