@@ -7,30 +7,7 @@ A python tool to find arbitrage opportunities given current exchange rates. Base
 
 Daily trading volume in currency exchange markets often exceeds $1 trillion. 
 Sometimes, these currency pairs drift in a way that creates arbitrage loops where you can convert through a certain sequence of currencies to return a profit in your base currency. This is referred to as an arbitrage loop. For example, you could do the following trades with $100 US and the exchange data below:
-<style type="text/css">
-ul {
-margin-top: 10px;
-}
 
-ul > li {
-font-size: 14px;
-line-height: 1.8;
-list-style-type: disc;
-}
-
-tr > td {
-padding: 8px;
-border: 1px solid #ddd;
-text-align: center;
-}
-
-table#rates {
-text-align: center;
-margin: auto;
-margin-top: 20px;
-margin-bottom: 20px;
-}
-</style>
 <table id="rates">
   <tr>
     <td></td>
